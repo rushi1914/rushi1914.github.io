@@ -287,7 +287,27 @@
     padding: 0.22rem 0.6rem; border: 1px solid var(--border2);
     color: var(--muted); letter-spacing: 0.05em; border-radius: 1px;
   }
-  .project-link {
+  .skill-cat { margin-bottom: 1.4rem; }
+  .skill-cat-label {
+    font-family: 'JetBrains Mono', monospace; font-size: 0.65rem;
+    letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);
+    margin-bottom: 0.55rem;
+  }
+  .skill-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .skill-tag {
+    font-size: 0.78rem; padding: 0.3rem 0.75rem;
+    border: 1px solid var(--border2); color: var(--ink2);
+    border-radius: 2px; background: var(--surface);
+    font-family: 'Outfit', sans-serif; font-weight: 400;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .skill-tag:hover { border-color: var(--accent); color: var(--accent); }
+  .skill-tag.primary { border-color: rgba(26,58,92,0.3); color: var(--accent); background: var(--accent-lt); }
+  .project-stack {
+    font-family: 'JetBrains Mono', monospace; font-size: 0.7rem;
+    color: var(--muted); margin-top: 0.6rem; line-height: 1.7;
+  }
+  .stack-label { color: var(--accent2); }
     display: inline-flex; align-items: center; gap: 0.4rem;
     margin-top: 0.85rem;
     font-family: 'JetBrains Mono', monospace; font-size: 0.68rem;
@@ -384,10 +404,11 @@
     <div class="hero-eyebrow">Computer Science Engineering · MITAOE Pune</div>
     <h1 class="hero-name">Rushikesh<br><em>Baban</em> Kedar</h1>
     <div class="hero-divider"></div>
-    <p class="hero-tagline">AI, Data Science &amp; Full-Stack Developer. Building scalable, real-world solutions at the intersection of intelligent systems and modern web engineering. Proficient in Java with a strong foundation in Data Structures &amp; Algorithms.</p>
+    <p class="hero-tagline">AI &amp; Data Science specialist. Building intelligent, scalable systems — from ML models to full-stack applications. Currently pursuing B.Tech CSE at MITAOE Pune.</p>
     <div class="hero-cta">
       <a href="#projects" class="btn-primary">View Projects</a>
       <a href="#experience" class="btn-outline">Experience</a>
+      <a href="https://drive.google.com/uc?export=download&id=1qvPfwDok1XlgD2e50NADuB2XyvDKogUy" target="_blank" class="btn-outline">↓ Resume</a>
     </div>
   </div>
   <div class="hero-right">
@@ -436,9 +457,9 @@
   </div>
   <div class="about-grid">
     <div class="about-text">
-      <p>I am a <strong>Computer Science Engineering student at MIT Academy of Engineering, Pune</strong>, with a strong foundation in AI/ML, data science, and full-stack development. My academic and professional work is driven by a genuine curiosity about how intelligent systems can solve tangible, real-world problems.</p>
-      <p>Over the past year I have completed <strong>five industry internships</strong> spanning AI/ML engineering, full-stack web development, financial analytics, data analytics at Deloitte, and digital marketing — giving me broad exposure across technical and business domains.</p>
-      <p>I thrive moving between research and production: taking models out of notebooks and into functional, user-facing systems. Whether building a ViT-GPT2-powered image captioning tool, engineering a full-stack marketplace, or analysing portfolio risk using Python and Excel, I apply the same standard of rigour across every project.</p>
+      <p>Computer Science Engineering student at <strong>MIT Academy of Engineering, Pune</strong>. Specialising in <strong>Data Science, AI/ML, and Full-Stack Development</strong> — with a focus on building intelligent systems that solve real problems.</p>
+      <p>Completed <strong>5 industry internships</strong> across AI engineering, data analytics, financial research, and full-stack development. Currently deepening expertise in <strong>Java &amp; Data Structures</strong> alongside ML and web projects.</p>
+      <p>I enjoy taking ideas from notebook to production — whether that's a membership prediction pipeline, a market intelligence dashboard, or a recommendation engine.</p>
       <div class="about-detail">
         <div class="about-detail-row"><span class="about-detail-key">Location</span><span class="about-detail-val">Pune, Maharashtra – 412105</span></div>
         <div class="about-detail-row"><span class="about-detail-key">Education</span><span class="about-detail-val">B.Tech Computer Science Engineering, MITAOE · CGPA 7.43</span></div>
@@ -450,14 +471,22 @@
     </div>
     <div class="skills-block" id="skills-block">
       <h3>Core Proficiencies</h3>
-      <div class="skill-item"><div class="skill-name">Python</div><div class="skill-bar"><div class="skill-fill" data-pct="92"></div></div></div>
-      <div class="skill-item"><div class="skill-name">Machine Learning / Data Science</div><div class="skill-bar"><div class="skill-fill" data-pct="85"></div></div></div>
-      <div class="skill-item"><div class="skill-name">SQL (MySQL)</div><div class="skill-bar"><div class="skill-fill" data-pct="80"></div></div></div>
-      <div class="skill-item"><div class="skill-name">JavaScript / React</div><div class="skill-bar"><div class="skill-fill" data-pct="85"></div></div></div>
-      <div class="skill-item"><div class="skill-name">Node.js / Express</div><div class="skill-bar"><div class="skill-fill" data-pct="78"></div></div></div>
-      <div class="skill-item"><div class="skill-name">Power BI / Tableau</div><div class="skill-bar"><div class="skill-fill" data-pct="74"></div></div></div>
-      <div class="skill-item"><div class="skill-name">Java (DSA)</div><div class="skill-bar"><div class="skill-fill" data-pct="80"></div></div></div>
-      <div class="skill-item"><div class="skill-name">C++ / C</div><div class="skill-bar"><div class="skill-fill" data-pct="68"></div></div></div>
+      <div class="skill-cat">
+        <div class="skill-cat-label">Languages</div>
+        <div class="skill-tags"><span class="skill-tag">Python</span><span class="skill-tag">Java</span><span class="skill-tag">JavaScript</span><span class="skill-tag">C++</span><span class="skill-tag">C</span></div>
+      </div>
+      <div class="skill-cat">
+        <div class="skill-cat-label">Data Science</div>
+        <div class="skill-tags"><span class="skill-tag primary">Pandas</span><span class="skill-tag primary">NumPy</span><span class="skill-tag primary">Scikit-Learn</span><span class="skill-tag primary">XGBoost</span><span class="skill-tag primary">SHAP</span><span class="skill-tag primary">Matplotlib</span><span class="skill-tag primary">Seaborn</span></div>
+      </div>
+      <div class="skill-cat">
+        <div class="skill-cat-label">Frameworks</div>
+        <div class="skill-tags"><span class="skill-tag">React</span><span class="skill-tag">Node.js</span><span class="skill-tag">Express.js</span><span class="skill-tag">Streamlit</span></div>
+      </div>
+      <div class="skill-cat">
+        <div class="skill-cat-label">Data &amp; Tools</div>
+        <div class="skill-tags"><span class="skill-tag">MySQL</span><span class="skill-tag">MongoDB</span><span class="skill-tag">Power BI</span><span class="skill-tag">Tableau</span><span class="skill-tag">Git</span><span class="skill-tag">Jupyter</span></div>
+      </div>
     </div>
   </div>
 </div>
@@ -506,7 +535,7 @@
       <div class="project-num">01</div>
       <div>
         <div class="project-title">CraveConnect — Membership Upgrade Prediction</div>
-        <p class="project-desc">End-to-end ML pipeline to predict food-app membership upgrade propensity using 18 behavioural and demographic features. Engineered propensity score buckets (Cold / Warm / Hot / Very Hot) for targeted segmentation. Applied SMOTE for class balancing and SHAP for model explainability. Team: Rushi, Akash Bhuyan, Rahul Atkare.</p>
+        <p class="project-desc">Built an end-to-end ML pipeline predicting membership upgrade propensity for a food-delivery app. Used 18 behavioural and demographic features, applied SMOTE for class imbalance, and used SHAP for model explainability. Engineered propensity buckets (Cold / Warm / Hot / Very Hot) enabling targeted marketing campaigns. Achieved strong precision-recall balance with XGBoost as the final model.</p><div class="project-stack"><span class="stack-label">Dataset:</span> Food-app user behaviour · <span class="stack-label">Team:</span> Rushi, Akash Bhuyan, Rahul Atkare</div>
         <div class="project-tags"><span class="tag">Python</span><span class="tag">Scikit-Learn</span><span class="tag">XGBoost</span><span class="tag">SMOTE</span><span class="tag">SHAP</span><span class="tag">Pandas</span></div>
         <a href="https://github.com/rushi1914/Craveconnect-membership-prediction" class="project-link" target="_blank">GitHub <span class="arrow">↗</span></a>
       </div>
@@ -516,7 +545,7 @@
       <div class="project-num">02</div>
       <div>
         <div class="project-title">Bengaluru Restaurant Market Intelligence</div>
-        <p class="project-desc">Analysed 844 restaurants across 8 Bengaluru locations for pricing, rating, cuisine and location-level patterns. Applied 9 statistical tests (Pearson, Mann-Whitney U, Kruskal-Wallis) across 15 visualisations. Key finding: price has near-zero correlation with ratings (r = −0.01); identified HSR Layout as top untapped market. Team: Rushi, Akash Bhuyan, Rahul Atkare.</p>
+        <p class="project-desc">Comprehensive EDA of 844 Bengaluru restaurants across 8 localities. Applied 9 statistical tests (Pearson, Mann-Whitney U, Kruskal-Wallis) and generated 15 visualisations. Key insight: price has near-zero correlation with ratings (r = −0.01). Identified HSR Layout as the top untapped market opportunity for new entrants.</p><div class="project-stack"><span class="stack-label">Dataset:</span> Zomato Bengaluru · <span class="stack-label">Tests:</span> 9 statistical methods · <span class="stack-label">Team:</span> Rushi, Akash Bhuyan, Rahul Atkare</div>
         <div class="project-tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Plotly</span><span class="tag">SciPy</span><span class="tag">Statsmodels</span></div>
         <a href="https://github.com/rushi1914/bengaluru-restaurant-market-intelligence" class="project-link" target="_blank">GitHub <span class="arrow">↗</span></a>
       </div>
@@ -526,7 +555,7 @@
       <div class="project-num">03</div>
       <div>
         <div class="project-title">Movie Recommendation System</div>
-        <p class="project-desc">Personalised movie suggestion engine using both content-based and collaborative filtering. Implemented in Python with Pandas and Scikit-Learn, evaluated on precision and recall metrics.</p>
+        <p class="project-desc">Hybrid recommendation engine combining content-based filtering (cosine similarity on TF-IDF vectors) and collaborative filtering. Generates top-N personalised movie suggestions evaluated on precision and recall metrics.</p><div class="project-stack"><span class="stack-label">Dataset:</span> MovieLens · <span class="stack-label">Models:</span> Cosine similarity, collaborative filtering</div>
         <div class="project-tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Scikit-Learn</span><span class="tag">Collaborative Filtering</span></div>
         <a href="https://github.com/rushi1914" class="project-link" target="_blank">GitHub <span class="arrow">↗</span></a>
       </div>
@@ -536,7 +565,7 @@
       <div class="project-num">04</div>
       <div>
         <div class="project-title">Global Air Quality &amp; Weather Unification</div>
-        <p class="project-desc">EDA-driven analysis of large-scale air quality and weather datasets to identify seasonal and climate patterns. Applied Random Forest for predictive modelling with Matplotlib visualisations.</p>
+        <p class="project-desc">Unified global air quality and weather datasets for large-scale EDA. Identified seasonal pollution cycles and climate correlations. Applied Random Forest to predict air quality index based on weather features, with full visualisation pipeline.</p><div class="project-stack"><span class="stack-label">Dataset:</span> Global AQI + Weather · <span class="stack-label">Model:</span> Random Forest Regressor</div>
         <div class="project-tags"><span class="tag">Python</span><span class="tag">EDA</span><span class="tag">Random Forest</span><span class="tag">Matplotlib</span><span class="tag">NumPy</span></div>
         <a href="https://github.com/rushi1914/Global-Air-Quality-Weather-Analytics" class="project-link" target="_blank">GitHub <span class="arrow">↗</span></a>
       </div>
